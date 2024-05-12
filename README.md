@@ -1,6 +1,9 @@
 # Tender-Document-Analyzer
 
-Made a Document Analyzer using Chatgpt API by Open AI for Tender based Documents. Used Django for building the framework on which this web application is based on. The Web App consists of 4 pages- Login,Signup, Upload and Results. Haven't focused much on the UI as this is more about the functionality of the code and harnessing the power of the AI. First I converted the whole PDF into Text followed which I extracted the dates using Python's Library Regex. Passed on the following data as parameters onto the API after a lot of hit and trials with token sizes, chunk sizes and what not upon which I finally settled on the code that gave me fascinating results after going gung ho on the chatgpt documentation. Gave the output side by side along with the original PDF for easy comparision.
+I developed a Document Analyzer application utilizing the ChatGPT API from OpenAI, designed to process tender documents. The application is built on Django, providing a robust framework for our web application, which consists of four main pages: Login, Signup, Upload, and Results.
+The core functionality begins with converting PDF documents into text. This is achieved through a reliable text extraction process. Following this, I implemented Python’s Regex library to meticulously extract dates from the converted text.
+After refining the process through extensive experimentation with token sizes and chunking strategies, I established optimal parameters for the API interactions. This approach has resulted in highly accurate and relevant outputs.
+To enhance user experience, the application displays the AI-generated insights alongside the original PDF text, enabling straightforward comparison and verification of the information extracted by the AI. This setup emphasizes functionality over aesthetics, focusing on leveraging the AI's capabilities rather than the user interface design.
 
 ## Features
 
