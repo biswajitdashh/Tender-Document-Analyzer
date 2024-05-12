@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Viewer</title>
+    <style>
+        .container {
+            display: flex; /* Using Flexbox for side-by-side layout */
+            justify-content: space-between; /* Adds space between the two sections */
+        }
+        .info-section, .pdf-section {
+            width: 48%; /* Slightly less than half the width to accommodate margins/padding */
+            height: 90vh; /* Set a viewport height */
+            overflow-y: scroll; /* Enables scrolling on y-axis if content is long */
+        }
+        iframe {
+            width: 100%; /* Takes full width of its container */
+            height: 100%; /* Takes full height of its container */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="pdf-section">
+            <!-- Display the original PDF -->
+            <iframe src="{{ pdf_url }}"></iframe>
+        </div>
+
+        <div class="info-section">
+            <!-- Display the processed information -->
+            {% if processed_text %}
+                {% for date, info in processed_text.items %}
+                    <p>{{ date }}: {{ info }}</p>
+                {% endfor %}
+            {% else %}
+                <p>No data processed or uploaded yet.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
